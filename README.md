@@ -1,4 +1,4 @@
-# Awesome Deep Learning Latency Attacks &amp; Defenses [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Deep Learning Latency Attacks &amp; Defenses [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](./LICENSE)
 
 A curated, continuously updated collection of papers on **deep learning latency, energy-latency, and timing (availability) attacks and defenses** — spanning object detection and autonomous-driving perception, dynamic/adaptive networks, transformers, and large language &amp; vision-language models (LLMs/VLMs).
 
@@ -12,6 +12,7 @@ This is the companion resource for the survey *“Deep Learning Latency Attacks 
 - [Inference-Stage Attacks](#inference-stage-attacks)
 - [Training-Stage Attacks](#training-stage-attacks)
 - [Defenses](#defenses)
+- [Paper](#paper)
 - [How to Contribute](#how-to-contribute)
 - [Citation](#citation)
 
@@ -125,6 +126,17 @@ Every attack family below shares one mechanism we call **intermediate-work ampli
 | SQUAD | arXiv (2026) | Early-exit ensembles | Runtime scheduling | CV | [paper](https://arxiv.org/abs/2601.22711) | ✘ |
 | Token-Budget Routing | arXiv (2026) | LLM serving | Budget enforcement | NLP | ✘ | ✘ |
 | Conformal Thinking | arXiv (2026) | Reasoning models | Budget enforcement | NLP | [paper](https://arxiv.org/abs/2602.03814) | ✘ |
+
+---
+
+## Paper
+
+The full survey manuscript (LaTeX source + compiled PDF) lives in [`/paper`](./paper):
+
+- [`survey.pdf`](./paper/survey.pdf) — compiled manuscript (ACM Computing Surveys format).
+- [`survey.tex`](./paper/survey.tex), [`references.bib`](./paper/references.bib), [`appendix_tables.tex`](./paper/appendix_tables.tex) — source. The appendix tables are generated from [`assets/catalog.json`](./assets/catalog.json) via `gen_tables.py`.
+
+To rebuild: `cd paper && pdflatex survey && bibtex survey && pdflatex survey && pdflatex survey`.
 
 ---
 
