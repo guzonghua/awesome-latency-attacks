@@ -14,7 +14,6 @@ The list focuses on attacks and defenses that affect inference-time or system-le
 
 **Table of Contents**
 - [Overview](#overview)
-- [Unifying Mechanism](#unifying-mechanism)
 - [Inference-Stage Attacks](#inference-stage-attacks)
 - [Training-Stage Attacks](#training-stage-attacks)
 - [Defenses](#defenses)
@@ -26,15 +25,9 @@ The list focuses on attacks and defenses that affect inference-time or system-le
 
 ## Overview
 
-<div align="center"><img src="./assets/overview_system_availability.png" width="95%" /></div>
+<div align="center"><img src="./assets/overview_system_availability_v4.png" width="95%" /></div>
 
 The overview frames latency attacks as system-level **availability** threats against budgeted AI pipelines. It connects deployed AI systems, attack-exploited bottlenecks, intermediate-work amplification, system-level failures, and defense control points.
-
-## Unifying Mechanism
-
-<div align="center"><img src="./assets/mechanism.png" width="92%" /></div>
-
-The mechanism figure focuses on **intermediate-work amplification**. Many latency attacks force a downstream stage, such as NMS, self-attention, autoregressive decoding, or expert routing, to process more intermediate objects, tokens, or steps than a benign input would generate. Because these stages can have super-linear worst-case cost, a modest increase in intermediate work can produce a disproportionate latency or energy increase. A common defense pattern is to enforce a **work budget** on intermediate objects or tokens.
 
 ---
 
