@@ -14,3 +14,5 @@ paper/*.fdb_latexmk
 *~
 __pycache__/
 *.pyc
+_md_fragments.json
+paper/_md_fragments.json

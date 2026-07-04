@@ -27,7 +27,9 @@ The list focuses on attacks and defenses that affect inference-time or system-le
 
 <div align="center"><img src="./assets/overview_system_availability_v4.png" width="95%" /></div>
 
-The overview frames latency attacks as system-level **availability** threats against budgeted AI pipelines. It connects deployed AI systems, attack-exploited bottlenecks, intermediate-work amplification, system-level failures, and defense control points.
+Latency attacks are **availability** attacks: rather than corrupting a prediction, the adversary inflates the inference-time computation, energy, or wall-clock latency of a model so a real-time consumer (a vehicle controller, an interactive service, a battery-powered sensor) misses its deadline or exhausts its resources — often while the prediction itself remains nominally correct. It connects deployed AI systems, attack-exploited bottlenecks, intermediate-work amplification, system-level failures, and defense control points.
+
+Every attack family shares one mechanism we call **intermediate-work amplification**: the adversary forces some downstream stage (NMS, self-attention, autoregressive decoding, expert routing) to process more intermediate objects, tokens, or steps than a benign input would generate. Because those stages have super-linear worst-case complexity, a modest increase in count produces a disproportionate cost increase. The natural cross-domain defense is a **work budget** — an enforced cap on intermediate objects/tokens per unit time.
 
 ---
 

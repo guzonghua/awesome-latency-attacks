@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
-"""Generate LaTeX appendix tables AND GitHub markdown tables from catalog.json."""
-import json, html
+"""Generate LaTeX appendix tables AND GitHub markdown tables from catalog.json.
 
-cat = json.load(open("/home/user/workspace/paper/catalog.json"))
+Usage: python gen_tables.py   (run from repo root)
+"""
+import json, html
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+PAPER_DIR = ROOT / "paper"
+
+cat = json.load(open(PAPER_DIR / "catalog.json"))
 
 # ---------------- LaTeX ----------------
 def tex_escape(s):
@@ -71,7 +78,7 @@ latex.append("")
 latex.append(latex_attack_table(tr, "Training-stage (poisoning / backdoor / weight) latency and energy attacks.", "tab:cat-training"))
 latex.append("")
 latex.append(latex_defense_table(de, "Defenses against latency, energy, and timing attacks, by control mechanism.", "tab:cat-defenses"))
-open("/home/user/workspace/paper/appendix_tables.tex", "w").write("\n".join(latex) + "\n")
+open(PAPER_DIR / "appendix_tables.tex", "w").write("\n".join(latex) + "\n")
 print("Wrote appendix_tables.tex (%d inf, %d train, %d def)" % (len(inf), len(tr), len(de)))
 
 # ---------------- Markdown ----------------
@@ -101,5 +108,5 @@ def md_defense_table(rows):
 json.dump({"inf_md": md_attack_table(inf), "tr_md": md_attack_table(tr),
            "de_md": md_defense_table(de),
            "counts": {"inf": len(inf), "tr": len(tr), "de": len(de)}},
-          open("/home/user/workspace/paper/_md_fragments.json", "w"))
+          open(PAPER_DIR / "_md_fragments.json", "w"))
 print("Wrote markdown fragments")
