@@ -14,9 +14,9 @@ readme = f"""# Awesome Deep Learning Latency Attacks &amp; Defenses [![Awesome](
 
 A curated, continuously updated collection of papers on **deep learning latency, energy-latency, and timing (availability) attacks and defenses** — spanning object detection and autonomous-driving perception, dynamic/adaptive networks, transformers, and large language &amp; vision-language models (LLMs/VLMs).
 
-This is the companion resource for the survey *“Deep Learning Latency Attacks and Defenses: A Survey from Object Detection to Large Language and Vision-Language Models.”* It currently indexes **{total} works** ({c['inf']} inference-stage attacks, {c['tr']} training-stage attacks, {c['de']} defenses).
+This is the companion resource for the survey *“Deep Learning Latency Attacks and Defenses: A Cross-Domain Survey.”* It currently indexes **{total} works** ({c['inf']} inference-stage attacks, {c['tr']} training-stage attacks, {c['de']} defenses).
 
-> 🔎 Prefer a searchable, filterable view? Open the **[interactive table on GitHub Pages](https://<your-org>.github.io/awesome-latency-attacks/)**.
+> 🔎 Prefer a searchable, filterable view? Open the **[interactive table on GitHub Pages](https://guzonghua.github.io/awesome-latency-attacks/)**.
 
 **Table of Contents**
 - [Overview](#overview)
@@ -80,10 +80,9 @@ Please keep entries to **peer-reviewed or arXiv-hosted** works with verifiable l
 If you find this resource useful, please cite the survey:
 
 ```bibtex
-@article{{latencysurvey2026,
-  title   = {{Deep Learning Latency Attacks and Defenses: A Survey from Object
-             Detection to Large Language and Vision-Language Models}},
-  author  = {{Anonymous Author(s)}},
+@article{{gu2026latencysurvey,
+  title   = {{Deep Learning Latency Attacks and Defenses: A Cross-Domain Survey}},
+  author  = {{Gu, Zonghua and Gao, Zeyu and Saremi, Amin}},
   journal = {{ACM Computing Surveys (under review)}},
   year    = {{2026}}
 }}

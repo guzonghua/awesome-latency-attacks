@@ -8,7 +8,7 @@
 
 A curated, continuously updated collection of papers on **deep learning latency, energy-latency, and timing (availability) attacks and defenses** — spanning object detection and autonomous-driving perception, dynamic/adaptive networks, transformers, and large language &amp; vision-language models (LLMs/VLMs).
 
-This is the companion resource for the survey *“Deep Learning Latency Attacks and Defenses: A Survey from Object Detection to Large Language and Vision-Language Models.”* It currently indexes **76 works** (45 inference-stage attacks, 10 training-stage attacks, 21 defenses).
+This is the companion resource for the survey *“Deep Learning Latency Attacks and Defenses: A Cross-Domain Survey.”* It currently indexes **90 works** (59 inference-stage attacks, 10 training-stage attacks, 21 defenses).
 
 > 🔎 Prefer a searchable, filterable view? Open the **[interactive table on GitHub Pages](https://guzonghua.github.io/awesome-latency-attacks/)**.
 
@@ -18,7 +18,6 @@ This is the companion resource for the survey *“Deep Learning Latency Attacks 
 - [Inference-Stage Attacks](#inference-stage-attacks)
 - [Training-Stage Attacks](#training-stage-attacks)
 - [Defenses](#defenses)
-- [Paper](#paper)
 - [How to Contribute](#how-to-contribute)
 - [Citation](#citation)
 
@@ -45,6 +44,7 @@ Every attack family below shares one mechanism we call **intermediate-work ampli
 | Daedalus | arXiv (2019) | Object detection (NMS) | CV / AD | White box (physical) | [paper](https://arxiv.org/abs/1902.02067) | [GitHub](https://github.com/NeuralSec/Daedalus-attack) |
 | Sparsity Attacks | IEEE TCAD (2020) | CNNs | CV | White box | [paper](https://arxiv.org/abs/2006.08020) | ✘ |
 | Tracker Hijacking | ICLR (2020) | Multi-object tracking | AD | White box | [paper](https://arxiv.org/abs/1905.11026) | ✘ |
+| ILFO | CVPR (2020) | Depth-adaptive networks (AdNNs) | CV | White box | [paper](https://youngwei.com/pdf/ILFO.pdf) | ✘ |
 | Sponge Examples | EuroS&P (2021) | Transformers + CNNs | CV & NLP | Black & white box | [paper](https://arxiv.org/abs/2006.03463) | [GitHub](https://github.com/iliaishacked/sponge_examples) |
 | DeepSloth | ICLR (2021) | Multi-exit CNNs | CV | White box | [paper](https://arxiv.org/abs/2010.02432) | [GitHub](https://github.com/Sanghyun-Hong/DeepSloth) |
 | Timing Side-Channel AE | IEICE Trans. (2021) | DNN classifiers (timing oracle) | CV | Black box (timing) | [paper](https://doi.org/10.1587/transfun.2020CIP0022) | ✘ |
@@ -70,6 +70,7 @@ Every attack family below shares one mechanism we call **intermediate-work ampli
 | Engorgio | arXiv (2024) | LLMs (output inflation) | NLP | White box + transfer | [paper](https://arxiv.org/abs/2412.19394) | ✘ |
 | Verbose Images | ICLR (2024) | Large VLMs | CV+NLP | White box | [paper](https://arxiv.org/abs/2401.11170) | [GitHub](https://github.com/KuofengGao/Verbose_Images) |
 | Uniform Inputs | IEEE SPW (2024) | CNNs (sparsity) | CV | Black box | [paper](https://arxiv.org/abs/2403.18587) | [GitHub](https://github.com/and-mill/2024-sponge-example-analysis) |
+| SlowFormer | CVPR (2024) | Efficient vision transformers | CV | White box (patch) | [paper](https://arxiv.org/abs/2310.02544) | [GitHub](https://github.com/UCDvision/SlowFormer) |
 | DetStorm | IEEE S&P (2025) | Camera perception | AD | White box (physical) | [paper](https://doi.org/10.1109/SP61157.2025.00236) | ✘ |
 | Inference-Time Impact Analysis | arXiv (2025) | Full perception (sim.) | AD | Simulation | [paper](https://arxiv.org/abs/2505.03850) | ✘ |
 | DDLS Efficiency Attacks | arXiv (2025) | Early-exit / token-pruning / MoE | CV & NLP | White & black box | [paper](https://arxiv.org/abs/2506.17621) | ✘ |
@@ -80,6 +81,11 @@ Every attack family below shares one mechanism we call **intermediate-work ampli
 | LingoLoop | arXiv (2025) | Multimodal LLMs | CV+NLP | White box | [paper](https://arxiv.org/abs/2506.14493) | ✘ |
 | Bit-Flip NMS Attack | WACV (2025) | Object detection (parameters) | CV / AD | Hardware (Rowhammer) | [paper](https://doi.org/10.1109/WACV61041.2025.00653) | ✘ |
 | Timestep-Compressed Attack | AAAI (2025) | Spiking neural networks | CV | White box | [paper](https://arxiv.org/abs/2508.13812) | ✘ |
+| QuantAttack | WACV (2025) | Dynamically quantized ViTs | CV | White box | [paper](https://arxiv.org/abs/2312.02220) | [GitHub](https://github.com/barasamit/QuantAttack) |
+| RepetitionCurse | arXiv (2025) | MoE LLMs (expert parallelism) | NLP | Black box | [paper](https://arxiv.org/abs/2512.23995) | ✘ |
+| FreezeVLA | arXiv (2025) | Vision-language-action models | Robotics | White box (image) | [paper](https://arxiv.org/abs/2509.19870) | ✘ |
+| EDPA | arXiv (2025) | Vision-language-action models | Robotics | Black box (patch) | [paper](https://arxiv.org/abs/2510.13237) | [GitHub](https://edpa-attack.github.io/) |
+| ANNIE | arXiv (2025) | Embodied AI / VLA robots | Robotics | White box | [paper](https://arxiv.org/abs/2509.03383) | [GitHub](https://github.com/RLCLab/Annie) |
 | CP-FREEZER | AAAI (2026) | Cooperative perception (V2V) | AD | White box (testbed) | [paper](https://ojs.aaai.org/index.php/AAAI/article/download/37082/41044) | ✘ |
 | Trajectory-Aware Attack | IEEE TMM (2026) | Multi-object tracking | AD | White box | [paper](https://doi.org/10.1109/TMM.2026.3651102) | ✘ |
 | SPLAT | IEEE TCAD (2026) | Multi-exit dynamic networks | CV | Black box | [paper](https://doi.org/10.1109/TCAD.2025.3576320) | ✘ |
@@ -87,6 +93,13 @@ Every attack family below shares one mechanism we call **intermediate-work ampli
 | Misrouter | arXiv (2026) | Mixture-of-experts LLMs | NLP | Black box (input-only) | [paper](https://arxiv.org/abs/2605.04446) | ✘ |
 | ReasoningBomb | ACM CCS (2026) | Large reasoning models | NLP | Black box | [paper](https://arxiv.org/abs/2602.00154) | ✘ |
 | ThinkTrap | NDSS (2026) | Reasoning LLM APIs | NLP | Black box | [paper](https://www.ndss-symposium.org/ndss2026/) | ✘ |
+| VidDoS | arXiv (2026) | Video-LLMs (streaming AD) | CV+NLP / AD | White box (universal patch) | [paper](https://arxiv.org/abs/2603.01454) | ✘ |
+| Semantic-DoS | arXiv (2026) | LLM-controlled robots | Robotics | Audio injection | [paper](https://arxiv.org/abs/2604.24790) | ✘ |
+| MAVLA | ACM WWW (2026) | Vision-language-action models | Robotics | White box | [paper](https://doi.org/10.1145/3774904.3792315) | ✘ |
+| Fill and Squeeze | arXiv (2026) | LLM serving scheduler | NLP | Black box (system) | [paper](https://arxiv.org/abs/2602.07878) | ✘ |
+| Beyond Max Tokens | arXiv (2026) | LLM agent tool chains (MCP) | NLP / Agentic | Black box | [paper](https://arxiv.org/abs/2601.10955) | ✘ |
+| From Shield to Target | arXiv (2026) | LLM agent guardrails | NLP / Agentic | Black box (transfer) | [paper](https://arxiv.org/abs/2606.14517) | ✘ |
+| Mobius Injection (AbO-DDoS) | arXiv (2026) | LLM agent infrastructure | Agentic | Injection | [paper](https://arxiv.org/abs/2605.11442) | ✘ |
 
 ---
 
@@ -135,17 +148,6 @@ Every attack family below shares one mechanism we call **intermediate-work ampli
 
 ---
 
-## Paper
-
-The full survey manuscript (LaTeX source + compiled PDF) lives in [`/paper`](./paper):
-
-- [`survey.pdf`](./paper/survey.pdf) — compiled manuscript (ACM Computing Surveys format).
-- [`survey.tex`](./paper/survey.tex), [`references.bib`](./paper/references.bib), [`appendix_tables.tex`](./paper/appendix_tables.tex) — source. The appendix tables are generated from [`assets/catalog.json`](./assets/catalog.json) via `gen_tables.py`.
-
-To rebuild: `cd paper && pdflatex survey && bibtex survey && pdflatex survey && pdflatex survey`.
-
----
-
 ## How to Contribute
 
 Contributions are welcome! To add a paper:
@@ -165,10 +167,9 @@ Please keep entries to **peer-reviewed or arXiv-hosted** works with verifiable l
 If you find this resource useful, please cite the survey:
 
 ```bibtex
-@article{latencysurvey2026,
-  title   = {Deep Learning Latency Attacks and Defenses: A Survey from Object
-             Detection to Large Language and Vision-Language Models},
-  author  = {Anonymous Author(s)},
+@article{gu2026latencysurvey,
+  title   = {Deep Learning Latency Attacks and Defenses: A Cross-Domain Survey},
+  author  = {Gu, Zonghua and Gao, Zeyu and Saremi, Amin},
   journal = {ACM Computing Surveys (under review)},
   year    = {2026}
 }
