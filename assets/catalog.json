@@ -139,7 +139,7 @@
       "target": "Multi-exit BERT",
       "app": "NLP",
       "setting": "White box",
-      "paper": "https://aclanthology.org/2023.findings-acl.602/",
+      "paper": "https://aclanthology.org/2023.findings-acl.634/",
       "code": "",
       "cite": "zhang2023slowbert"
     },
@@ -294,7 +294,7 @@
       "app": "NLP",
       "setting": "White box + transfer",
       "paper": "https://arxiv.org/abs/2412.19394",
-      "code": "",
+      "code": "https://github.com/jianshuod/Engorgio-prompt",
       "cite": "dong2024engorgio"
     },
     {
@@ -382,7 +382,7 @@
       "app": "NLP",
       "setting": "Black box",
       "paper": "https://arxiv.org/abs/2412.13879",
-      "code": "",
+      "code": "https://github.com/shuita2333/AutoDoS",
       "cite": "zhang2025crabs"
     },
     {
@@ -747,7 +747,7 @@
       "app": "NLP",
       "setting": "Backdoor / poisoning",
       "paper": "https://arxiv.org/abs/2410.10760",
-      "code": "",
+      "code": "https://github.com/sail-sg/P-DoS",
       "cite": "gao2024dospoisoning"
     },
     {
@@ -771,7 +771,7 @@
       "type": "Robust/adaptive training",
       "app": "AD",
       "paper": "https://doi.org/10.1109/CVPR52734.2025.01791",
-      "code": "",
+      "code": "https://github.com/Hill-Wu1998/underload",
       "cite": "wang2025cantslow"
     },
     {
