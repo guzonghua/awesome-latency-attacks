@@ -105,7 +105,7 @@ The overall organization of this survey is summarized in Figure~\ref{fig:survey-
 
 \begin{figure*}[htbp]
   \centering
-  \includegraphics[width=\textwidth]{Figs/overview_structure.png}
+  \includegraphics[width=\textwidth]{Figs/overview_structure.pdf}
   \caption{Overview of the survey structure.}
   \Description{A high-level structure diagram showing how the survey is organized.}
   \label{fig:survey-structure}
@@ -499,7 +499,11 @@ Activation-sparsity monitoring offers a lightweight, architecture-agnostic anoma
 At the serving layer, request scheduling, admission control, and pool right-sizing~\cite{chen2026tokenbudget,zhang2025pd3f} can reduce, isolate, or bound the effect of operational bottlenecks becoming attack amplifiers, depending on the admission, scheduling, and resource-accounting guarantees they provide. The following methods are included to identify possible systems primitives or boundary cases, not as validated latency-attack defenses. \emph{Certifiers}---formal robustness verifiers with abstain/fallback behavior---can themselves create an availability surface, since an adversary can systematically trigger abstention to deny service~\cite{lorenz2021certifiers}; a safety fallback can become a target. Beyond admission control, hardware-level system defenses target the serving boundary directly: \emph{Garrison}~\cite{garrison2024} is a GPU-accelerated inference system for adversarial ensemble defense that uses Multi-Instance GPUs with reinforcement-learning-based scheduling, improving adversarial robustness by up to 24.5\% while accelerating ensemble inference by $6.6\times$; its evaluation targets integrity-oriented ensembles, so accelerating the defense---rather than demonstrated protection against latency amplification---is the relevant contribution here. \emph{PSML}~\cite{psml2023} secures model-serving systems against model \emph{extraction} via fingerprinting and noise-based defenses; it is adjacent serving security rather than a latency-attack defense, and we list it only to delineate the serving-security boundary. The \emph{time-traveling} defense~\cite{etim2024timetraveling} is an unusual input-side variant for the perception domain: it queries historical Street View imagery and uses majority-vote inference to resist adversarial manipulation of traffic signs, achieving 100\% defense effectiveness in its integrity evaluation; it has not been evaluated against a latency objective, and we include it as evidence that temporal redundancy can substitute for per-frame robustness in geographically static scenes.
 
 \begin{table}[htbp]
-  \caption{Defense families against latency and energy attacks, by control mechanism, with an explicit evidence class per method. No method in this table has been evaluated against an \emph{adaptive} latency attack unless its evidence class says so.}
+  \caption{Defense families against latency and energy attacks, organized by
+control mechanism and evidence class. The evidence class identifies the
+quantity or security property evaluated; it does not imply robustness against
+adaptive latency attacks.}
+  %\caption{Defense families against latency and energy attacks, by control mechanism, with an explicit evidence class per method. No method in this table has been evaluated against an \emph{adaptive} latency attack unless its evidence class says so.}
   \label{tab:defenses}
   \footnotesize
   \setlength{\tabcolsep}{4pt}
@@ -512,7 +516,7 @@ At the serving layer, request scheduling, admission control, and pool right-sizi
     Budget enforcement & Conformal Thinking~\cite{wang2026conformal} & Budget-control & Risk-controlled reasoning stop (budget-control evaluation, not adaptive-latency) \\
     \addlinespace
     Robust / adaptive training & Can't Slow Me Down~\cite{wang2025cantslow} & Direct latency & $13\rightarrow43$ FPS under attack \\
-    Robust / adaptive training & Exit calibration~\cite{varma2024slowdown} & Direct compute/work & $\sim$$60\%$ of lost efficiency recovered \\
+    Robust / adaptive training & Exit calibration~\cite{varma2024slowdown} & Direct compute/work & $\sim60\%$ of lost efficiency recovered \\
     \addlinespace
     Input transformation & Adaptive resizing~\cite{schoof2024beyond} & Direct latency & $90.18\%$ reduction in NMS time \\
     Input transformation & DefQ~\cite{qiu2023defq} & Direct compute/work & Early-exit rate restored to $85\%+$ \\
@@ -538,8 +542,33 @@ At the serving layer, request scheduling, admission control, and pool right-sizi
     \bottomrule
   \end{tabularx}
 
-  {\footnotesize\par\vspace{2pt}\emph{Notes. Evidence classes.} The direct classes name the specific availability-cost quantity a method was evaluated against, because a reduction in one (e.g., FLOPs or energy) is not automatically evidence of improvement in another (e.g., tail latency, goodput, or deadline behavior): \emph{Direct latency} = evaluated against measured latency or slowdown; \emph{Direct energy} = evaluated against energy overhead; \emph{Direct compute/work} = evaluated against a work proxy (FLOPs, exit rate, activated units); \emph{Direct capacity} = evaluated against serving capacity or goodput. \emph{Budget-control} = evaluated for compute-budget control but not against an adaptive latency attack. \emph{Timing channel} = timing-leakage evaluation with an availability implication. \emph{Integrity only} = evaluated against integrity attacks (candidate latency defense, availability effectiveness untested). \emph{General efficiency} = efficiency mechanism not evaluated against adaptive latency attacks. \emph{Conceptual} = proposed control. \emph{Adjacent security} = adjacent control, not a latency-attack defense. PD3F and token-budget routing span budget enforcement (primary) and serving control (secondary) and are listed once under their primary family. Reported figures are relative to each source's own attacked baseline and are not cross-comparable.\par}
+  \vspace{2pt}
+  \parbox{\linewidth}{\footnotesize
+  \textit{Notes.} Reported improvements use each source paper's own baseline
+  and are not directly comparable across rows.
+  }
 \end{table}
+
+%\textit{Notes.} The evidence class states what each method was evaluated against, not that every method provides robustness against adaptive latency attacks. Reported improvements use the source papers' own baselines and are not directly comparable across rows.
+
+      %{\footnotesize\par\vspace{2pt}\emph{Notes. Evidence classes.} The direct classes name the specific availability-cost quantity a method was evaluated against, because a reduction in one (e.g., FLOPs or energy) is not automatically evidence of improvement in another (e.g., tail latency, goodput, or deadline behavior): \emph{Direct latency} = evaluated against measured latency or slowdown; \emph{Direct energy} = evaluated against energy overhead; \emph{Direct compute/work} = evaluated against a work proxy (FLOPs, exit rate, activated units); \emph{Direct capacity} = evaluated against serving capacity or goodput. \emph{Budget-control} = evaluated for compute-budget control but not against an adaptive latency attack. \emph{Timing channel} = timing-leakage evaluation with an availability implication. \emph{Integrity only} = evaluated against integrity attacks (candidate latency defense, availability effectiveness untested). \emph{General efficiency} = efficiency mechanism not evaluated against adaptive latency attacks. \emph{Conceptual} = proposed control. \emph{Adjacent security} = adjacent control, not a latency-attack defense. PD3F and token-budget routing span budget enforcement (primary) and serving control (secondary) and are listed once under their primary family. Reported figures are relative to each source's own attacked baseline and are not cross-comparable.\par}
+To distinguish demonstrated defenses from plausible transfers,
+Table~\ref{tab:defenses} assigns each method an explicit evidence class.
+\emph{Direct latency}, \emph{direct energy}, \emph{direct compute/work}, and
+\emph{direct capacity} indicate evaluation against measured latency or
+slowdown, energy consumption, computational work, or serving capacity or
+goodput, respectively. These direct classes identify the availability-related
+quantity evaluated; they do not imply robustness against adaptive latency
+attacks. \emph{Budget-control} indicates evaluation of compute-budget control
+without necessarily demonstrating protection against an adaptive latency
+attack. \emph{Timing channel} indicates evaluation against timing leakage or
+timing variation with an availability implication. \emph{Integrity only}
+identifies candidate latency defenses evaluated only against integrity
+attacks; \emph{general efficiency} identifies efficiency improvements not
+evaluated against latency attacks; \emph{conceptual} denotes a proposed
+control without evaluation against an adaptive latency attack; and
+\emph{adjacent security} denotes a serving or systems-security mechanism not
+evaluated against latency amplification.
 
 %\textbf{Section Summary.} Existing defenses differ considerably in where they intervene along the inference pipeline, but none provides comprehensive protection. Most approaches either reduce average computational cost or detect anomalous behavior without explicitly bounding worst-case execution. In contrast, mechanisms that directly constrain computation—such as token budgets, bounded execution, or constant-time implementations—appear more promising because they address the underlying cause of latency inflation rather than its symptoms. Nevertheless, balancing efficiency, robustness, and predictive performance remains an open challenge across all defense families.
 
@@ -571,7 +600,7 @@ We view the work budget as an abstract design principle rather than a concrete a
 
 \begin{figure*}[htbp]
   \centering
-  \includegraphics[width=\textwidth]{figure3_workbudget}  % compiled standalone PDF
+  \includegraphics[width=\textwidth]{figure3_workbudget.pdf}  % compiled standalone PDF
   %\caption{The work-budget principle converts an unbounded adversarial   worst case into a design-time constant. \textbf{(a)}~Perception: naive   non-maximum suppression (NMS) cost grows quadratically as a box-flooding   attack inflates the candidate count from ${\sim}101$ to ${\sim}19{,}000$   (Groundswell on YOLOv5s~\cite{xia2026groundswell}); a cap of $N_1{=}300$ holds   worst-case NMS cost at $\Theta(300^2)$, collapsing the amplification factor   from ${\sim}(19000/101)^2$ to at most $(300/101)^2$. \textbf{(b)}~Serving:   quadratic KV-attention decode cost grows as a reasoning denial-of-service   attack inflates completion tokens from ${\sim}300$ to ${\sim}18{,}759$   (ReasoningBomb~\cite{liu2026reasoningbomb}); a token cap $N_2{=}2048$ bounds cost   at $\Theta(2048^2)$. Both panels use log--log axes; the capped curve   (dashed) plateaus at the vertical cap line while the unbounded curve   (solid) keeps rising. Given caps $\{N_i\}$, end-to-end worst-case latency   is bounded by $\sum_i \Theta(N_i^{p_i})$, independent of the input.}
   \caption{Conceptual illustration of the work-budget abstraction across perception and serving systems. Limiting the objects admitted to a stage bounds that stage's count-dependent work, assuming the cap is applied before the expensive operation; it does not by itself bound upstream candidate generation, pre-cap sorting/selection, memory allocation and copying, other uncapped stages, or cumulative work across repeated tool/agent calls.
   The left panel illustrates a candidate cap applied against a Groundswell-style NMS-overload workload~\cite{xia2026groundswell} and distinguishes \emph{generated} candidates from candidates \emph{admitted} to NMS; the right panel illustrates a generation budget applied against a ReasoningBomb-style reasoning-inflation workload~\cite{liu2026reasoningbomb} and distinguishes attack-induced continuation \emph{pressure} from tokens \emph{actually emitted} before termination. These citations identify motivating attacks, not the depicted cap implementations. Both panels use log--log axes; the capped curve (dashed) plateaus at the vertical cap line while the unbounded curve (solid) keeps rising. The figure is conceptual and intended to illustrate the common design principle underlying several existing defenses.}
@@ -670,7 +699,8 @@ Latency attacks extend the security of deep learning beyond correctness to timel
 \bibliography{references}
 
 %% ===================================================================
-\appendix
+\clearpage
+\appendix{Appendix}
 \section{Glossary of Metrics and Terms}
 \label{sec:glossary}
 

@@ -139,7 +139,7 @@
       "target": "Multi-exit BERT",
       "app": "NLP",
       "setting": "White box",
-      "paper": "https://aclanthology.org/2023.findings-acl.602/",
+      "paper": "https://aclanthology.org/2023.findings-acl.634/",
       "code": "",
       "cite": "zhang2023slowbert"
     },
@@ -294,7 +294,7 @@
       "app": "NLP",
       "setting": "White box + transfer",
       "paper": "https://arxiv.org/abs/2412.19394",
-      "code": "",
+      "code": "https://github.com/jianshuod/Engorgio-prompt",
       "cite": "dong2024engorgio"
     },
     {
@@ -382,7 +382,7 @@
       "app": "NLP",
       "setting": "Black box",
       "paper": "https://arxiv.org/abs/2412.13879",
-      "code": "",
+      "code": "https://github.com/shuita2333/AutoDoS",
       "cite": "zhang2025crabs"
     },
     {
@@ -648,6 +648,171 @@
       "paper": "https://arxiv.org/abs/2605.11442",
       "code": "",
       "cite": "liang2026mobius"
+    },
+    {
+      "name": "GradAuto",
+      "venue": "ECCV",
+      "year": 2022,
+      "target": "Dynamic neural networks (depth/width AdNNs)",
+      "app": "CV",
+      "setting": "White box",
+      "paper": "https://doi.org/10.1007/978-3-031-19772-7_37",
+      "code": "https://github.com/JianhongPan/GradAuto",
+      "cite": "pan2022gradauto"
+    },
+    {
+      "name": "EREBA",
+      "venue": "ICSE",
+      "year": 2022,
+      "target": "Adaptive neural networks",
+      "app": "CV",
+      "setting": "Black box",
+      "paper": "https://doi.org/10.1145/3510003.3510088",
+      "code": "",
+      "cite": "haque2022ereba"
+    },
+    {
+      "name": "AntiNODE",
+      "venue": "ICCVW",
+      "year": 2023,
+      "target": "Neural ODEs",
+      "app": "CV",
+      "setting": "White & black box",
+      "paper": "https://doi.org/10.1109/ICCVW60793.2023.00163",
+      "code": "",
+      "cite": "haque2023antinode"
+    },
+    {
+      "name": "Groundswell",
+      "venue": "VehicleSec",
+      "year": 2026,
+      "target": "Object detection (camera NMS)",
+      "app": "CV / AD",
+      "setting": "Physical (white box)",
+      "paper": "https://www.usenix.org/conference/vehiclesec26",
+      "code": "",
+      "cite": "xia2026groundswell"
+    },
+    {
+      "name": "OverThink",
+      "venue": "arXiv",
+      "year": 2025,
+      "target": "Reasoning LLMs",
+      "app": "NLP",
+      "setting": "Black box (prompt)",
+      "paper": "https://arxiv.org/abs/2502.02542",
+      "code": "",
+      "cite": "kumar2025overthink"
+    },
+    {
+      "name": "GradMDM",
+      "venue": "IEEE TPAMI",
+      "year": 2023,
+      "target": "Dynamic neural networks",
+      "app": "CV",
+      "setting": "White box",
+      "paper": "https://arxiv.org/abs/2304.06724",
+      "code": "",
+      "cite": "pan2023gradmdm"
+    },
+    {
+      "name": "SlothSpeech",
+      "venue": "INTERSPEECH",
+      "year": 2023,
+      "target": "Speech recognition (ASR)",
+      "app": "Speech",
+      "setting": "White box",
+      "paper": "https://www.isca-archive.org/interspeech_2023/haque23_interspeech.pdf",
+      "code": "",
+      "cite": "haque2023slothspeech"
+    },
+    {
+      "name": "WAFFLE",
+      "venue": "NeurIPS",
+      "year": 2023,
+      "target": "Multi-exit language models",
+      "app": "NLP",
+      "setting": "White & black box",
+      "paper": "https://arxiv.org/abs/2310.19152",
+      "code": "https://github.com/ZachCoalson/WAFFLE",
+      "cite": "coalson2023waffle"
+    },
+    {
+      "name": "DeepPerform",
+      "venue": "ASE",
+      "year": 2022,
+      "target": "Dynamic (resource-constrained) DNNs",
+      "app": "CV / NLP",
+      "setting": "White box (testing)",
+      "paper": "https://arxiv.org/abs/2210.05370",
+      "code": "",
+      "cite": "chen2022deepperform"
+    },
+    {
+      "name": "DeSparsify",
+      "venue": "NeurIPS",
+      "year": 2024,
+      "target": "Token-sparsified ViTs",
+      "app": "CV",
+      "setting": "White box",
+      "paper": "https://arxiv.org/abs/2402.02554",
+      "code": "",
+      "cite": "yehezkel2024desparsify"
+    },
+    {
+      "name": "Speculative-Decoding Side Channel",
+      "venue": "arXiv",
+      "year": 2024,
+      "target": "LLM serving (speculative decoding)",
+      "app": "NLP",
+      "setting": "Black box (timing)",
+      "paper": "https://arxiv.org/abs/2411.01076",
+      "code": "",
+      "cite": "sun2024speculative"
+    },
+    {
+      "name": "DDAS",
+      "venue": "NSF/edge",
+      "year": 2022,
+      "target": "Edge dynamic (multi-exit) DNNs",
+      "app": "CV",
+      "setting": "White box",
+      "paper": "https://par.nsf.gov/servlets/purl/10390197",
+      "code": "",
+      "cite": ""
+    },
+    {
+      "name": "LoopLLM",
+      "venue": "AAAI",
+      "year": 2026,
+      "target": "LLMs (repetitive generation)",
+      "app": "NLP",
+      "setting": "White box + transfer",
+      "paper": "https://arxiv.org/abs/2511.07876",
+      "code": "",
+      "cite": "li2026loopllm"
+    },
+    {
+      "name": "ExtendAttack",
+      "venue": "arXiv",
+      "year": 2025,
+      "target": "Large reasoning models",
+      "app": "NLP",
+      "setting": "Black box (encoding)",
+      "paper": "https://arxiv.org/abs/2506.13737",
+      "code": "",
+      "cite": "zhu2025extendattack"
+    },
+    {
+      "name": "CORBA",
+      "venue": "ACL Findings",
+      "year": 2026,
+      "target": "LLM multi-agent systems",
+      "app": "Agentic",
+      "setting": "Contagious injection",
+      "paper": "https://arxiv.org/abs/2502.14529",
+      "code": "https://github.com/zhrli324/Corba",
+      "cite": "zhou2026corba"
     }
   ],
   "training_attacks": [
@@ -747,7 +912,7 @@
       "app": "NLP",
       "setting": "Backdoor / poisoning",
       "paper": "https://arxiv.org/abs/2410.10760",
-      "code": "",
+      "code": "https://github.com/sail-sg/P-DoS",
       "cite": "gao2024dospoisoning"
     },
     {
@@ -760,6 +925,39 @@
       "paper": "https://arxiv.org/abs/2505.06413",
       "code": "",
       "cite": "liu2025vlmbackdoor"
+    },
+    {
+      "name": "DrainCode",
+      "venue": "arXiv",
+      "year": 2026,
+      "target": "RAG code generation",
+      "app": "NLP / Code",
+      "setting": "Corpus poisoning",
+      "paper": "https://arxiv.org/abs/2601.20615",
+      "code": "https://github.com/DeepSoftwareAnalytics/DrainCode",
+      "cite": "wang2025draincode"
+    },
+    {
+      "name": "BitHydra",
+      "venue": "arXiv",
+      "year": 2025,
+      "target": "LLM weights (no-EOS)",
+      "app": "NLP",
+      "setting": "Hardware (bit-flip)",
+      "paper": "https://arxiv.org/abs/2505.16670",
+      "code": "",
+      "cite": "yan2025bithydra"
+    },
+    {
+      "name": "RA-ICA (RAG)",
+      "venue": "ACM WWW",
+      "year": 2026,
+      "target": "RAG-enhanced LLMs",
+      "app": "NLP",
+      "setting": "Corpus poisoning",
+      "paper": "https://arxiv.org/abs/2606.02643",
+      "code": "",
+      "cite": "liu2026inference"
     }
   ],
   "defenses": [
@@ -771,7 +969,7 @@
       "type": "Robust/adaptive training",
       "app": "AD",
       "paper": "https://doi.org/10.1109/CVPR52734.2025.01791",
-      "code": "",
+      "code": "https://github.com/Hill-Wu1998/underload",
       "cite": "wang2025cantslow"
     },
     {
@@ -993,6 +1191,61 @@
       "paper": "https://arxiv.org/abs/2108.11299",
       "code": "",
       "cite": "lorenz2021certifiers"
+    },
+    {
+      "name": "TALE (Token-Budget Reasoning)",
+      "venue": "arXiv",
+      "year": 2024,
+      "target": "Reasoning LLMs (prompt budget)",
+      "type": "Budget enforcement",
+      "app": "NLP",
+      "paper": "https://arxiv.org/abs/2412.18547",
+      "code": "https://github.com/GeniusHTX/TALE",
+      "cite": "han2024tale"
+    },
+    {
+      "name": "Concise CoT (CCoT)",
+      "venue": "arXiv",
+      "year": 2024,
+      "target": "Reasoning LLMs (prompt concision)",
+      "type": "Budget enforcement",
+      "app": "NLP",
+      "paper": "https://arxiv.org/abs/2401.05618",
+      "code": "https://github.com/matthewrenze/jhu-concise-cot",
+      "cite": "renze2024ccot"
+    },
+    {
+      "name": "CoT-Valve",
+      "venue": "ACL",
+      "year": 2025,
+      "target": "Reasoning LLMs (length control)",
+      "type": "Budget enforcement",
+      "app": "NLP",
+      "paper": "https://aclanthology.org/2025.acl-long.300/",
+      "code": "https://github.com/horseee/CoT-Valve",
+      "cite": "ma2025cotvalve"
+    },
+    {
+      "name": "Feature Distillation",
+      "venue": "CVPR",
+      "year": 2019,
+      "target": "DNN classifiers (JPEG/DCT)",
+      "type": "Input transformation",
+      "app": "CV",
+      "paper": "https://doi.org/10.1109/CVPR.2019.00095",
+      "code": "",
+      "cite": "liu2019featuredistill"
+    },
+    {
+      "name": "DefQ",
+      "venue": "IEEE IoT-J",
+      "year": 2023,
+      "target": "Multi-exit DNNs (edge)",
+      "type": "Input transformation",
+      "app": "CV",
+      "paper": "https://doi.org/10.1109/JIOT.2021.3138935",
+      "code": "",
+      "cite": "qiu2023defq"
     }
   ]
 }

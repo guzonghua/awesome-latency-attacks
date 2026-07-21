@@ -8,7 +8,7 @@
 
 This repository is maintained as a companion resource for the survey *“Deep Learning Latency Attacks and Defenses: A Cross-Domain Survey.”* It indexes papers, code links, taxonomy notes, and figures on latency-oriented availability threats in deployed AI systems.
 
-The list focuses on attacks and defenses that affect inference-time or system-level cost — latency, energy, throughput pressure, and deadline misses — rather than attacks that only change model predictions. It currently includes **90 works** (59 inference-stage attacks, 10 training-stage attacks, 21 defenses).
+The list focuses on attacks and defenses that affect inference-time or system-level cost — latency, energy, throughput pressure, and deadline misses — rather than attacks that only change model predictions. It currently includes **113 works** (74 inference-stage attacks, 13 training-stage attacks, 26 defenses).
 
 > Search and filter the catalog in the **[interactive table on GitHub Pages](https://guzonghua.github.io/awesome-latency-attacks/)**.
 
@@ -54,6 +54,10 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | NMTSloth | ESEC/FSE (2022) | Decoder-based NMT | NLP | White box | [paper](https://arxiv.org/abs/2210.03696v1) | [GitHub](https://github.com/SeekingDream/FSE22_NMTSloth) |
 | LLMEffiChecker | ACM TOSEM (2022) | LLMs | NLP | Black & white box | [paper](https://arxiv.org/abs/2210.03696) | [GitHub](https://github.com/Cap-Ning/LLMEffiChecker) |
 | NICGSlowDown | CVPR (2022) | Decoder-based image captioning | CV | White box | [paper](https://arxiv.org/abs/2203.15859) | [GitHub](https://github.com/SeekingDream/CVPR22_NICGSlowDown) |
+| GradAuto | ECCV (2022) | Dynamic neural networks (depth/width AdNNs) | CV | White box | [paper](https://doi.org/10.1007/978-3-031-19772-7_37) | [GitHub](https://github.com/JianhongPan/GradAuto) |
+| EREBA | ICSE (2022) | Adaptive neural networks | CV | Black box | [paper](https://doi.org/10.1145/3510003.3510088) | ✘ |
+| DeepPerform | ASE (2022) | Dynamic (resource-constrained) DNNs | CV / NLP | White box (testing) | [paper](https://arxiv.org/abs/2210.05370) | ✘ |
+| DDAS | NSF/edge (2022) | Edge dynamic (multi-exit) DNNs | CV | White box | [paper](https://par.nsf.gov/servlets/purl/10390197) | ✘ |
 | SAME | ACL (2023) | Multi-exit transformers | NLP | White box | [paper](https://arxiv.org/abs/2305.12228) | [GitHub](https://github.com/MatthewCYM/SAME) |
 | SlowBERT | ACL Findings (2023) | Multi-exit BERT | NLP | White box | [paper](https://aclanthology.org/2023.findings-acl.634/) | ✘ |
 | No-Skim | arXiv (2023) | Skimming language models | NLP | Black & white box | [paper](https://arxiv.org/abs/2312.09494) | ✘ |
@@ -61,6 +65,10 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | SlowLiDAR | CVPR (2023) | 3D LiDAR detection | CV / AD | White box | [paper](https://openaccess.thecvf.com/content/CVPR2023/papers/Liu_SlowLiDAR_Increasing_the_Latency_of_LiDAR-Based_Detection_Using_Adversarial_Examples_CVPR_2023_paper.pdf) | [GitHub](https://github.com/WUSTL-CSPL/SlowLiDAR) |
 | WIP Tracker Attack | VehicleSec (2023) | Multi-object tracking | AD | White box (patch) | [paper](https://doi.org/10.14722/vehiclesec.2023.23063) | ✘ |
 | Variable-Time Inference | AISec@CCS (2023) | Object detection (NMS timing) | CV | Black box (timing) | [paper](https://doi.org/10.1145/3605764.3623912) | ✘ |
+| AntiNODE | ICCVW (2023) | Neural ODEs | CV | White & black box | [paper](https://doi.org/10.1109/ICCVW60793.2023.00163) | ✘ |
+| GradMDM | IEEE TPAMI (2023) | Dynamic neural networks | CV | White box | [paper](https://arxiv.org/abs/2304.06724) | ✘ |
+| SlothSpeech | INTERSPEECH (2023) | Speech recognition (ASR) | Speech | White box | [paper](https://www.isca-archive.org/interspeech_2023/haque23_interspeech.pdf) | ✘ |
+| WAFFLE | NeurIPS (2023) | Multi-exit language models | NLP | White & black box | [paper](https://arxiv.org/abs/2310.19152) | [GitHub](https://github.com/ZachCoalson/WAFFLE) |
 | Overload | CVPR (2024) | Object detection (edge) | CV / AD | White box | [paper](https://arxiv.org/abs/2304.05370) | ✘ |
 | Beyond PhantomSponges | ACM WiseML (2024) | Object detection (NMS) | CV / AD | White box | [paper](https://doi.org/10.1145/3649403.3656485) | ✘ |
 | SlowTrack | AAAI (2024) | Camera perception (detect+track) | AD | White box | [paper](https://arxiv.org/abs/2312.09520) | [GitHub](https://github.com/eaiers/SlowTrack) |
@@ -73,6 +81,8 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | Verbose Images | ICLR (2024) | Large VLMs | CV+NLP | White box | [paper](https://arxiv.org/abs/2401.11170) | [GitHub](https://github.com/KuofengGao/Verbose_Images) |
 | Uniform Inputs | IEEE SPW (2024) | CNNs (sparsity) | CV | Black box | [paper](https://arxiv.org/abs/2403.18587) | [GitHub](https://github.com/and-mill/2024-sponge-example-analysis) |
 | SlowFormer | CVPR (2024) | Efficient vision transformers | CV | White box (patch) | [paper](https://arxiv.org/abs/2310.02544) | [GitHub](https://github.com/UCDvision/SlowFormer) |
+| DeSparsify | NeurIPS (2024) | Token-sparsified ViTs | CV | White box | [paper](https://arxiv.org/abs/2402.02554) | ✘ |
+| Speculative-Decoding Side Channel | arXiv (2024) | LLM serving (speculative decoding) | NLP | Black box (timing) | [paper](https://arxiv.org/abs/2411.01076) | ✘ |
 | DetStorm | IEEE S&P (2025) | Camera perception | AD | White box (physical) | [paper](https://doi.org/10.1109/SP61157.2025.00236) | ✘ |
 | Inference-Time Impact Analysis | arXiv (2025) | Full perception (sim.) | AD | Simulation | [paper](https://arxiv.org/abs/2505.03850) | ✘ |
 | DDLS Efficiency Attacks | arXiv (2025) | Early-exit / token-pruning / MoE | CV & NLP | White & black box | [paper](https://arxiv.org/abs/2506.17621) | ✘ |
@@ -88,6 +98,8 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | FreezeVLA | arXiv (2025) | Vision-language-action models | Robotics | White box (image) | [paper](https://arxiv.org/abs/2509.19870) | ✘ |
 | EDPA | arXiv (2025) | Vision-language-action models | Robotics | Black box (patch) | [paper](https://arxiv.org/abs/2510.13237) | [GitHub](https://edpa-attack.github.io/) |
 | ANNIE | arXiv (2025) | Embodied AI / VLA robots | Robotics | White box | [paper](https://arxiv.org/abs/2509.03383) | [GitHub](https://github.com/RLCLab/Annie) |
+| OverThink | arXiv (2025) | Reasoning LLMs | NLP | Black box (prompt) | [paper](https://arxiv.org/abs/2502.02542) | ✘ |
+| ExtendAttack | arXiv (2025) | Large reasoning models | NLP | Black box (encoding) | [paper](https://arxiv.org/abs/2506.13737) | ✘ |
 | CP-FREEZER | AAAI (2026) | Cooperative perception (V2V) | AD | White box (testbed) | [paper](https://ojs.aaai.org/index.php/AAAI/article/download/37082/41044) | ✘ |
 | Trajectory-Aware Attack | IEEE TMM (2026) | Multi-object tracking | AD | White box | [paper](https://doi.org/10.1109/TMM.2026.3651102) | ✘ |
 | SPLAT | IEEE TCAD (2026) | Multi-exit dynamic networks | CV | Black box | [paper](https://doi.org/10.1109/TCAD.2025.3576320) | ✘ |
@@ -102,6 +114,9 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | Beyond Max Tokens | arXiv (2026) | LLM agent tool chains (MCP) | NLP / Agentic | Black box | [paper](https://arxiv.org/abs/2601.10955) | ✘ |
 | From Shield to Target | arXiv (2026) | LLM agent guardrails | NLP / Agentic | Black box (transfer) | [paper](https://arxiv.org/abs/2606.14517) | ✘ |
 | Mobius Injection (AbO-DDoS) | arXiv (2026) | LLM agent infrastructure | Agentic | Injection | [paper](https://arxiv.org/abs/2605.11442) | ✘ |
+| Groundswell | VehicleSec (2026) | Object detection (camera NMS) | CV / AD | Physical (white box) | [paper](https://www.usenix.org/conference/vehiclesec26) | ✘ |
+| LoopLLM | AAAI (2026) | LLMs (repetitive generation) | NLP | White box + transfer | [paper](https://arxiv.org/abs/2511.07876) | ✘ |
+| CORBA | ACL Findings (2026) | LLM multi-agent systems | Agentic | Contagious injection | [paper](https://arxiv.org/abs/2502.14529) | [GitHub](https://github.com/zhrli324/Corba) |
 
 ---
 
@@ -119,6 +134,9 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | Sensing-AI Sponge | IEEE GLOBECOM (2025) | Sensing DNNs (IoT) | Sensing | Partial control | [paper](https://doi.org/10.1109/GLOBECOM59602.2025.11432163) | ✘ |
 | EvoWeight (FPGA) | IEEE HOST (2025) | FPGA DNN accelerators | CV | Full control | [paper](https://doi.org/10.1109/HOST64725.2025.11050058) | ✘ |
 | Reflection Backdoor (VLM-AD) | arXiv (2025) | Driving VLM planner | AD | Backdoor (physical trigger) | [paper](https://arxiv.org/abs/2505.06413) | ✘ |
+| BitHydra | arXiv (2025) | LLM weights (no-EOS) | NLP | Hardware (bit-flip) | [paper](https://arxiv.org/abs/2505.16670) | ✘ |
+| DrainCode | arXiv (2026) | RAG code generation | NLP / Code | Corpus poisoning | [paper](https://arxiv.org/abs/2601.20615) | [GitHub](https://github.com/DeepSoftwareAnalytics/DrainCode) |
+| RA-ICA (RAG) | ACM WWW (2026) | RAG-enhanced LLMs | NLP | Corpus poisoning | [paper](https://arxiv.org/abs/2606.02643) | ✘ |
 
 ---
 
@@ -126,10 +144,12 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 
 |Defense | Venue | Target | Mechanism | Domain | Paper :page_facing_up: | Code |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| Feature Distillation | CVPR (2019) | DNN classifiers (JPEG/DCT) | Input transformation | CV | [paper](https://doi.org/10.1109/CVPR.2019.00095) | ✘ |
 | DEE Scheduling | ACM CIKM (2021) | Early-exit networks | Runtime scheduling | CV | [paper](https://doi.org/10.1145/3459637.3482335) | ✘ |
 | Certifier Caveat | arXiv (2021) | Certified classifiers | Defense pitfall | CV | [paper](https://arxiv.org/abs/2108.11299) | ✘ |
 | Constant-Time NMS | AISec@CCS (2023) | Object detection (NMS) | Bounded execution | CV | [paper](https://doi.org/10.1145/3605764.3623912) | ✘ |
 | PSML | arXiv (2023) | Inference serving systems | System / serving control | ML serving | [paper](https://arxiv.org/abs/2307.01292) | ✘ |
+| DefQ | IEEE IoT-J (2023) | Multi-exit DNNs (edge) | Input transformation | CV | [paper](https://doi.org/10.1109/JIOT.2021.3138935) | ✘ |
 | Adaptive Resizing | ACM WiseML (2024) | Object detection (NMS) | Input transformation | AD | [paper](https://doi.org/10.1145/3649403.3656485) | ✘ |
 | ADAV Patch Defense | arXiv (2024) | Object detection | Input transformation | AD | [paper](https://arxiv.org/abs/2412.06215) | ✘ |
 | Securing AV Perception | IEEE TIV (2024) | AV visual perception | Input transformation | AD | [paper](https://doi.org/10.1109/TIV.2024.3403667) | ✘ |
@@ -137,6 +157,8 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | Sparsity Monitor | IEEE SPW (2024) | CNNs | Runtime monitoring | CV | [paper](https://arxiv.org/abs/2403.18587) | [GitHub](https://github.com/and-mill/2024-sponge-example-analysis) |
 | Garrison | ACM/IEEE DAC (2024) | Ensemble inference (GPU) | System / serving control | CV | [paper](https://doi.org/10.1145/3649329.3654810) | ✘ |
 | Time-Traveling Defense | arXiv (2024) | Traffic-sign classifiers | Temporal redundancy | AD | [paper](https://arxiv.org/abs/2410.08338) | ✘ |
+| TALE (Token-Budget Reasoning) | arXiv (2024) | Reasoning LLMs (prompt budget) | Budget enforcement | NLP | [paper](https://arxiv.org/abs/2412.18547) | [GitHub](https://github.com/GeniusHTX/TALE) |
+| Concise CoT (CCoT) | arXiv (2024) | Reasoning LLMs (prompt concision) | Budget enforcement | NLP | [paper](https://arxiv.org/abs/2401.05618) | [GitHub](https://github.com/matthewrenze/jhu-concise-cot) |
 | Can't Slow Me Down | CVPR (2025) | Edge object detectors | Robust/adaptive training | AD | [paper](https://doi.org/10.1109/CVPR52734.2025.01791) | [GitHub](https://github.com/Hill-Wu1998/underload) |
 | DCT Patch Elimination | IEEE RCAR (2025) | Object detection | Input transformation | AD | [paper](https://doi.org/10.1109/RCAR65431.2025.11139457) | ✘ |
 | Real-Time LiDAR Defense | ACM CCS (2025) | LiDAR detection | Runtime monitoring | AD | [paper](https://doi.org/10.1145/3719027.3765227) | ✘ |
@@ -144,6 +166,7 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | Pruning Defense | IEEE GLOBECOM (2025) | Sensing DNNs | Architectural sparsity | Sensing | [paper](https://doi.org/10.1109/GLOBECOM59602.2025.11432163) | ✘ |
 | BlindSight | arXiv (2025) | VLMs | Architectural sparsity | CV+NLP | [paper](https://arxiv.org/abs/2507.09071) | ✘ |
 | PD3F | EMNLP (2025) | LLM serving | Budget enforcement | NLP | [paper](https://arxiv.org/abs/2505.18680) | ✘ |
+| CoT-Valve | ACL (2025) | Reasoning LLMs (length control) | Budget enforcement | NLP | [paper](https://aclanthology.org/2025.acl-long.300/) | [GitHub](https://github.com/horseee/CoT-Valve) |
 | SQUAD | arXiv (2026) | Early-exit ensembles | Runtime scheduling | CV | [paper](https://arxiv.org/abs/2601.22711) | ✘ |
 | Token-Budget Routing | arXiv (2026) | LLM serving | Budget enforcement | NLP | ✘ | ✘ |
 | Conformal Thinking | arXiv (2026) | Reasoning models | Budget enforcement | NLP | [paper](https://arxiv.org/abs/2602.03814) | ✘ |
