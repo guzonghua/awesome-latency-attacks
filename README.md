@@ -25,6 +25,12 @@ The list focuses on attacks and defenses that affect inference-time or system-le
 
 ## Overview
 
+<p align="center"><b>Figure 1.</b> Overview of the survey structure.</p>
+
+<div align="center"><img src="./assets/overview_structure.png" width="95%" /></div>
+
+<p align="center"><b>Figure 2.</b> Latency attacks as system-level availability threats.</p>
+
 <div align="center"><img src="./assets/overview_system_availability_v4.png" width="95%" /></div>
 
 Latency attacks are **availability** attacks: rather than corrupting a prediction, the adversary inflates the inference-time computation, energy, or wall-clock latency of a model so a real-time consumer (a vehicle controller, an interactive service, a battery-powered sensor) misses its deadline or exhausts its resources — often while the prediction itself remains nominally correct. It connects deployed AI systems, attack-exploited bottlenecks, intermediate-work amplification, system-level failures, and defense control points.
@@ -176,8 +182,8 @@ If you find this resource useful, please cite the survey:
 ```bibtex
 @article{gu2026latencysurvey,
   title   = {Deep Learning Latency Attacks and Defenses: A Cross-Domain Survey},
-  author  = {Gu, Zonghua and Gao, Zeyu and Saremi, Amin},
-  journal = {ACM Computing Surveys (under review)},
+  author  = {Gu, Zonghua and Gao, Zeyu and Saremi, Amin and Chakraborty, Samarjit},
+  journal = {under review},
   year    = {2026}
 }
 ```
