@@ -813,6 +813,17 @@
       "paper": "https://arxiv.org/abs/2502.14529",
       "code": "https://github.com/zhrli324/Corba",
       "cite": "zhou2026corba"
+    },
+    {
+      "name": "EVADE (NMS Realism Study)",
+      "venue": "NeurIPS",
+      "year": 2025,
+      "target": "NMS latency attacks (critical re-evaluation)",
+      "app": "CV / AD",
+      "setting": "Critical evaluation (4 attacks, 7 platforms, 15 models)",
+      "paper": "https://proceedings.neurips.cc/paper_files/paper/2025/file/371713c3e5314dff9483c62c5abb98a8-Paper-Conference.pdf",
+      "code": "",
+      "cite": "monteuuis2025evade"
     }
   ],
   "training_attacks": [

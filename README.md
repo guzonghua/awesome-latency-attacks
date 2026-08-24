@@ -8,7 +8,7 @@
 
 This repository is maintained as a companion resource for the survey *“Deep Learning Latency Attacks and Defenses: A Cross-Domain Survey.”* It indexes papers, code links, taxonomy notes, and figures on latency-oriented availability threats in deployed AI systems.
 
-The list focuses on attacks and defenses that affect inference-time or system-level cost — latency, energy, throughput pressure, and deadline misses — rather than attacks that only change model predictions. It currently includes **113 works** (74 inference-stage attacks, 13 training-stage attacks, 26 defenses).
+The list focuses on attacks and defenses that affect inference-time or system-level cost — latency, energy, throughput pressure, and deadline misses — rather than attacks that only change model predictions. It currently includes **114 works** (75 inference-stage attacks, 13 training-stage attacks, 26 defenses).
 
 > Search and filter the catalog in the **[interactive table on GitHub Pages](https://guzonghua.github.io/awesome-latency-attacks/)**.
 
@@ -91,6 +91,7 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | ANNIE | arXiv (2025) | Embodied AI / VLA robots | Robotics | White box | [paper](https://arxiv.org/abs/2509.03383) | [GitHub](https://github.com/RLCLab/Annie) |
 | OverThink | arXiv (2025) | Reasoning LLMs | NLP | Black box (prompt) | [paper](https://arxiv.org/abs/2502.02542) | ✘ |
 | ExtendAttack | arXiv (2025) | Large reasoning models | NLP | Black box (encoding) | [paper](https://arxiv.org/abs/2506.13737) | ✘ |
+| EVADE (NMS Realism Study) | NeurIPS (2025) | NMS latency attacks (critical re-evaluation) | CV / AD | Critical evaluation (4 attacks, 7 platforms, 15 models) | [paper](https://proceedings.neurips.cc/paper_files/paper/2025/file/371713c3e5314dff9483c62c5abb98a8-Paper-Conference.pdf) | ✘ |
 | CP-FREEZER | AAAI (2026) | Cooperative perception (V2V) | AD | White box (testbed) | [paper](https://ojs.aaai.org/index.php/AAAI/article/download/37082/41044) | ✘ |
 | Trajectory-Aware Attack | IEEE TMM (2026) | Multi-object tracking | AD | White box | [paper](https://doi.org/10.1109/TMM.2026.3651102) | ✘ |
 | SPLAT | IEEE TCAD (2026) | Multi-exit dynamic networks | CV | Black box | [paper](https://doi.org/10.1109/TCAD.2025.3576320) | ✘ |
