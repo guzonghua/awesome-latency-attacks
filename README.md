@@ -12,15 +12,6 @@ The list focuses on attacks and defenses that affect inference-time or system-le
 
 > Search and filter the catalog in the **[interactive table on GitHub Pages](https://guzonghua.github.io/awesome-latency-attacks/)**.
 
-**Table of Contents**
-- [Overview](#overview)
-- [Inference-Stage Attacks](#inference-stage-attacks)
-- [Training-Stage Attacks](#training-stage-attacks)
-- [Defenses](#defenses)
-- [Paper](#paper)
-- [How to Contribute](#how-to-contribute)
-- [Citation](#citation)
-
 ---
 
 ## Overview
@@ -170,31 +161,6 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | SQUAD | arXiv (2026) | Early-exit ensembles | Runtime scheduling | CV | [paper](https://arxiv.org/abs/2601.22711) | ✘ |
 | Token-Budget Routing | arXiv (2026) | LLM serving | Budget enforcement | NLP | ✘ | ✘ |
 | Conformal Thinking | arXiv (2026) | Reasoning models | Budget enforcement | NLP | [paper](https://arxiv.org/abs/2602.03814) | ✘ |
-
----
-
-## Paper
-
-The survey manuscript source and compiled PDF are included in [`/paper`](./paper):
-
-- [`survey.pdf`](./paper/survey.pdf) — compiled manuscript in ACM Computing Surveys format.
-- [`survey.tex`](./paper/survey.tex), [`references.bib`](./paper/references.bib), [`appendix_tables.tex`](./paper/appendix_tables.tex) — source files. The appendix tables are derived from [`assets/catalog.json`](./assets/catalog.json) via `gen_tables.py`.
-
-To rebuild the manuscript locally: `cd paper && pdflatex survey && bibtex survey && pdflatex survey && pdflatex survey`.
-
----
-
-## How to Contribute
-
-Issues and pull requests are welcome for new papers, corrected metadata, and broken links.
-
-1. Edit [`assets/catalog.json`](./assets/catalog.json), adding the entry to `inference_attacks`, `training_attacks`, or `defenses`.
-2. Run `python3 gen_site.py` to regenerate the README tables from the catalog. The interactive site reads `assets/catalog.json` directly.
-3. Open a pull request with a short note on the paper or correction.
-
-Each entry should include `name`, `venue`, `year`, `target`, `app` (domain), `setting` (or `type` for defenses), `paper`, `code`, and `cite`. Use official author-maintained code repositories or official project pages when available. If only a third-party reproduction exists, mark it clearly rather than listing it as official code.
-
-Please keep entries to peer-reviewed or arXiv-hosted works with verifiable links, and preserve the current category structure.
 
 ---
 

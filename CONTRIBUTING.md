@@ -4,7 +4,7 @@ Thanks for helping keep this catalog of deep learning latency, energy-latency, a
 
 ## The catalog is the single source of truth
 
-Everything — the `README.md` tables, the interactive [GitHub Pages site](https://guzonghua.github.io/awesome-latency-attacks/), and the LaTeX appendix in the paper — is generated from **[`assets/catalog.json`](./assets/catalog.json)**. You only edit that one file.
+Everything — the `README.md` tables and the interactive [GitHub Pages site](https://guzonghua.github.io/awesome-latency-attacks/) — is generated from **[`assets/catalog.json`](./assets/catalog.json)**. You only edit that one file.
 
 ## Adding a paper
 
@@ -32,10 +32,9 @@ Everything — the `README.md` tables, the interactive [GitHub Pages site](https
 
    **Defenses** — replace `"setting"` with `"type"` (the control mechanism, e.g. `Budget enforcement`, `Input transformation`, `Runtime monitoring`).
 
-4. **Regenerate** the README and LaTeX tables:
+4. **Regenerate** the README tables:
    ```bash
-   python gen_tables.py    # rebuilds paper/appendix_tables.tex
-   python gen_readme.py    # rebuilds README.md
+   python gen_site.py      # rebuilds README.md
    ```
    The interactive `index.html` needs no regeneration — it reads `assets/catalog.json` directly at load time.
 5. Open a **pull request** describing the paper you added.

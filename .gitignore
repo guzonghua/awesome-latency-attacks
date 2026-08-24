@@ -1,18 +1,6 @@
-# LaTeX build artifacts
-paper/*.aux
-paper/*.log
-paper/*.out
-paper/*.bbl
-paper/*.blg
-paper/*.toc
-paper/*.synctex.gz
-paper/*.fls
-paper/*.fdb_latexmk
-
 # OS / editor
 .DS_Store
 *~
 __pycache__/
 *.pyc
 _md_fragments.json
-paper/_md_fragments.json
