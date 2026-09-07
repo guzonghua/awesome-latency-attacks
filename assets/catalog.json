@@ -91,7 +91,7 @@
     {
       "name": "LLMEffiChecker",
       "venue": "ACM TOSEM",
-      "year": 2022,
+      "year": 2024,
       "target": "LLMs",
       "app": "NLP",
       "setting": "Black & white box",
@@ -640,13 +640,13 @@
     },
     {
       "name": "Groundswell",
-      "venue": "VehicleSec",
+      "venue": "USENIX VehicleSec",
       "year": 2026,
-      "target": "Object detection (camera NMS)",
+      "target": "Object detection (NMS)",
       "app": "CV / AD",
-      "setting": "Physical (white box)",
-      "paper": "https://www.usenix.org/conference/vehiclesec26",
-      "code": "",
+      "setting": "White box",
+      "paper": "https://www.usenix.org/conference/vehiclesec26/presentation/xia",
+      "code": "https://zenodo.org/records/19672875",
       "cite": "xia2026groundswell"
     },
     {

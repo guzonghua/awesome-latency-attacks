@@ -42,7 +42,6 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | Timing Side-Channel AE | IEICE Trans. (2021) | DNN classifiers (timing oracle) | CV | Black box (timing) | [paper](https://doi.org/10.1587/transfun.2020CIP0022) | ✘ |
 | SpikeAttack | ACM/IEEE DAC (2022) | Spiking neural networks | CV | White box | [paper](https://dl.acm.org/doi/pdf/10.1145/3489517.3530443) | ✘ |
 | NMTSloth | ESEC/FSE (2022) | Decoder-based NMT | NLP | White box | [paper](https://arxiv.org/abs/2210.03696v1) | [GitHub](https://github.com/SeekingDream/FSE22_NMTSloth) |
-| LLMEffiChecker | ACM TOSEM (2022) | LLMs | NLP | Black & white box | [paper](https://dl.acm.org/doi/full/10.1145/3664812) | [GitHub](https://github.com/Cap-Ning/LLMEffiChecker) |
 | NICGSlowDown | CVPR (2022) | Decoder-based image captioning | CV | White box | [paper](https://arxiv.org/abs/2203.15859) | [GitHub](https://github.com/SeekingDream/CVPR22_NICGSlowDown) |
 | GradAuto | ECCV (2022) | Dynamic neural networks (depth/width AdNNs) | CV | White box | [paper](https://doi.org/10.1007/978-3-031-19772-7_37) | [GitHub](https://github.com/JianhongPan/GradAuto) |
 | EREBA | ICSE (2022) | Adaptive neural networks | CV | Black box | [paper](https://doi.org/10.1145/3510003.3510088) | ✘ |
@@ -58,6 +57,7 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | GradMDM | IEEE TPAMI (2023) | Dynamic neural networks | CV | White box | [paper](https://arxiv.org/abs/2304.06724) | ✘ |
 | SlothSpeech | INTERSPEECH (2023) | Speech recognition (ASR) | Speech | White box | [paper](https://www.isca-archive.org/interspeech_2023/haque23_interspeech.pdf) | ✘ |
 | WAFFLE | NeurIPS (2023) | Multi-exit language models | NLP | White & black box | [paper](https://arxiv.org/abs/2310.19152) | [GitHub](https://github.com/ZachCoalson/WAFFLE) |
+| LLMEffiChecker | ACM TOSEM (2024) | LLMs | NLP | Black & white box | [paper](https://dl.acm.org/doi/full/10.1145/3664812) | [GitHub](https://github.com/Cap-Ning/LLMEffiChecker) |
 | Overload | CVPR (2024) | Object detection (edge) | CV / AD | White box | [paper](https://arxiv.org/abs/2304.05370) | ✘ |
 | Beyond PhantomSponges | ACM WiseML (2024) | Object detection (NMS) | CV / AD | White box | [paper](https://doi.org/10.1145/3649403.3656485) | ✘ |
 | SlowTrack | AAAI (2024) | Camera perception (detect+track) | AD | White box | [paper](https://arxiv.org/abs/2312.09520) | [GitHub](https://github.com/eaiers/SlowTrack) |
@@ -102,7 +102,7 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | Beyond Max Tokens | arXiv (2026) | LLM agent tool chains (MCP) | NLP / Agentic | Black box | [paper](https://arxiv.org/abs/2601.10955) | ✘ |
 | From Shield to Target | arXiv (2026) | LLM agent guardrails | NLP / Agentic | Black box (transfer) | [paper](https://arxiv.org/abs/2606.14517) | ✘ |
 | Mobius Injection (AbO-DDoS) | arXiv (2026) | LLM agent infrastructure | Agentic | Injection | [paper](https://arxiv.org/abs/2605.11442) | ✘ |
-| Groundswell | VehicleSec (2026) | Object detection (camera NMS) | CV / AD | Physical (white box) | [paper](https://www.usenix.org/conference/vehiclesec26) | ✘ |
+| Groundswell | USENIX VehicleSec (2026) | Object detection (NMS) | CV / AD | White box | [paper](https://www.usenix.org/conference/vehiclesec26/presentation/xia) | [GitHub](https://zenodo.org/records/19672875) |
 | LoopLLM | AAAI (2026) | LLMs (repetitive generation) | NLP | White box + transfer | [paper](https://arxiv.org/abs/2511.07876) | ✘ |
 | CORBA | ACL Findings (2026) | LLM multi-agent systems | Agentic | Contagious injection | [paper](https://arxiv.org/abs/2502.14529) | [GitHub](https://github.com/zhrli324/Corba) |
 
