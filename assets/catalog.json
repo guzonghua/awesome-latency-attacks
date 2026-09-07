@@ -23,17 +23,6 @@
       "cite": "krithivasan2020sparsity"
     },
     {
-      "name": "Tracker Hijacking",
-      "venue": "ICLR",
-      "year": 2020,
-      "target": "Multi-object tracking",
-      "app": "AD",
-      "setting": "White box",
-      "paper": "https://arxiv.org/abs/1905.11026",
-      "code": "",
-      "cite": "jia2020fooling"
-    },
-    {
       "name": "ILFO",
       "venue": "CVPR",
       "year": 2020,
@@ -106,9 +95,9 @@
       "target": "LLMs",
       "app": "NLP",
       "setting": "Black & white box",
-      "paper": "https://arxiv.org/abs/2210.03696",
+      "paper": "https://dl.acm.org/doi/full/10.1145/3664812",
       "code": "https://github.com/Cap-Ning/LLMEffiChecker",
-      "cite": "feng2022llmeffichecker"
+      "cite": "feng2024llmeffichecker"
     },
     {
       "name": "NICGSlowDown",
@@ -177,17 +166,6 @@
       "cite": "liu2023slowlidar"
     },
     {
-      "name": "WIP Tracker Attack",
-      "venue": "VehicleSec",
-      "year": 2023,
-      "target": "Multi-object tracking",
-      "app": "AD",
-      "setting": "White box (patch)",
-      "paper": "https://doi.org/10.14722/vehiclesec.2023.23063",
-      "code": "",
-      "cite": "ma2023wip"
-    },
-    {
       "name": "Variable-Time Inference",
       "venue": "AISec@CCS",
       "year": 2023,
@@ -241,17 +219,6 @@
       "paper": "https://arxiv.org/abs/2406.05800",
       "code": "",
       "cite": "ma2024slowperception"
-    },
-    {
-      "name": "TPA (Time-aware)",
-      "venue": "Pattern Recognition Letters",
-      "year": 2024,
-      "target": "Detection + segmentation",
-      "app": "AD",
-      "setting": "White box",
-      "paper": "https://doi.org/10.1016/j.patrec.2024.01.010",
-      "code": "",
-      "cite": "lu2024tpa"
     },
     {
       "name": "Steal Now Attack Later",
@@ -375,13 +342,13 @@
       "cite": "gao2024ttslow"
     },
     {
-      "name": "Crabs",
-      "venue": "ACL Findings",
+      "name": "Crabs/AutoDoS",
+      "venue": "ACL",
       "year": 2025,
       "target": "LLMs (DoS)",
       "app": "NLP",
       "setting": "Black box",
-      "paper": "https://arxiv.org/abs/2412.13879",
+      "paper": "https://aclanthology.org/2025.findings-acl.580/",
       "code": "https://github.com/shuita2333/AutoDoS",
       "cite": "zhang2025crabs"
     },
@@ -505,17 +472,6 @@
       "paper": "https://ojs.aaai.org/index.php/AAAI/article/download/37082/41044",
       "code": "",
       "cite": "wang2026cpfreezer"
-    },
-    {
-      "name": "Trajectory-Aware Attack",
-      "venue": "IEEE TMM",
-      "year": 2026,
-      "target": "Multi-object tracking",
-      "app": "AD",
-      "setting": "White box",
-      "paper": "https://doi.org/10.1109/TMM.2026.3651102",
-      "code": "",
-      "cite": "hu2026trajectory"
     },
     {
       "name": "SPLAT",
@@ -772,14 +728,14 @@
     },
     {
       "name": "DDAS",
-      "venue": "NSF/edge",
+      "venue": "GLOBECOM",
       "year": 2022,
       "target": "Edge dynamic (multi-exit) DNNs",
       "app": "CV",
       "setting": "White box",
-      "paper": "https://par.nsf.gov/servlets/purl/10390197",
+      "paper": "https://doi.org/10.1109/GLOBECOM48099.2022.10001235",
       "code": "",
-      "cite": ""
+      "cite": "ayyat2022dynamic"
     },
     {
       "name": "LoopLLM",
@@ -829,14 +785,14 @@
   "training_attacks": [
     {
       "name": "Sponge Poisoning",
-      "venue": "arXiv / AsiaCCS",
-      "year": 2022,
+      "venue": "Information Sciences",
+      "year": 2025,
       "target": "CNNs",
       "app": "CV",
       "setting": "Partial control",
-      "paper": "https://arxiv.org/abs/2203.08147",
+      "paper": "https://doi.org/10.1016/j.ins.2025.121905",
       "code": "https://github.com/Cinofix/sponge_poisoning_energy_latency_attack",
-      "cite": "cina2022sponge"
+      "cite": "cina2025energy"
     },
     {
       "name": "On-Device Sponge Poisoning",

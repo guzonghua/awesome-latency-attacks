@@ -8,7 +8,7 @@
 
 This repository is maintained as a companion resource for the survey *“Deep Learning Latency Attacks and Defenses: A Cross-Domain Survey.”* It indexes papers, code links, taxonomy notes, and figures on latency-oriented availability threats in deployed AI systems.
 
-The list focuses on attacks and defenses that affect inference-time or system-level cost — latency, energy, throughput pressure, and deadline misses — rather than attacks that only change model predictions. It currently includes **114 works** (75 inference-stage attacks, 13 training-stage attacks, 26 defenses).
+The list focuses on attacks and defenses that affect inference-time or system-level cost — latency, energy, throughput pressure, and deadline misses — rather than attacks that only change model predictions. It currently includes **110 works** (71 inference-stage attacks, 13 training-stage attacks, 26 defenses).
 
 > Search and filter the catalog in the **[interactive table on GitHub Pages](https://guzonghua.github.io/awesome-latency-attacks/)**.
 
@@ -36,25 +36,23 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | Daedalus | arXiv (2019) | Object detection (NMS) | CV / AD | White box (physical) | [paper](https://arxiv.org/abs/1902.02067) | [GitHub](https://github.com/NeuralSec/Daedalus-attack) |
 | Sparsity Attacks | IEEE TCAD (2020) | CNNs | CV | White box | [paper](https://arxiv.org/abs/2006.08020) | ✘ |
-| Tracker Hijacking | ICLR (2020) | Multi-object tracking | AD | White box | [paper](https://arxiv.org/abs/1905.11026) | ✘ |
 | ILFO | CVPR (2020) | Depth-adaptive networks (AdNNs) | CV | White box | [paper](https://youngwei.com/pdf/ILFO.pdf) | ✘ |
 | Sponge Examples | EuroS&P (2021) | Transformers + CNNs | CV & NLP | Black & white box | [paper](https://arxiv.org/abs/2006.03463) | [GitHub](https://github.com/iliaishacked/sponge_examples) |
 | DeepSloth | ICLR (2021) | Multi-exit CNNs | CV | White box | [paper](https://arxiv.org/abs/2010.02432) | [GitHub](https://github.com/Sanghyun-Hong/DeepSloth) |
 | Timing Side-Channel AE | IEICE Trans. (2021) | DNN classifiers (timing oracle) | CV | Black box (timing) | [paper](https://doi.org/10.1587/transfun.2020CIP0022) | ✘ |
 | SpikeAttack | ACM/IEEE DAC (2022) | Spiking neural networks | CV | White box | [paper](https://dl.acm.org/doi/pdf/10.1145/3489517.3530443) | ✘ |
 | NMTSloth | ESEC/FSE (2022) | Decoder-based NMT | NLP | White box | [paper](https://arxiv.org/abs/2210.03696v1) | [GitHub](https://github.com/SeekingDream/FSE22_NMTSloth) |
-| LLMEffiChecker | ACM TOSEM (2022) | LLMs | NLP | Black & white box | [paper](https://arxiv.org/abs/2210.03696) | [GitHub](https://github.com/Cap-Ning/LLMEffiChecker) |
+| LLMEffiChecker | ACM TOSEM (2022) | LLMs | NLP | Black & white box | [paper](https://dl.acm.org/doi/full/10.1145/3664812) | [GitHub](https://github.com/Cap-Ning/LLMEffiChecker) |
 | NICGSlowDown | CVPR (2022) | Decoder-based image captioning | CV | White box | [paper](https://arxiv.org/abs/2203.15859) | [GitHub](https://github.com/SeekingDream/CVPR22_NICGSlowDown) |
 | GradAuto | ECCV (2022) | Dynamic neural networks (depth/width AdNNs) | CV | White box | [paper](https://doi.org/10.1007/978-3-031-19772-7_37) | [GitHub](https://github.com/JianhongPan/GradAuto) |
 | EREBA | ICSE (2022) | Adaptive neural networks | CV | Black box | [paper](https://doi.org/10.1145/3510003.3510088) | ✘ |
 | DeepPerform | ASE (2022) | Dynamic (resource-constrained) DNNs | CV / NLP | White box (testing) | [paper](https://arxiv.org/abs/2210.05370) | ✘ |
-| DDAS | NSF/edge (2022) | Edge dynamic (multi-exit) DNNs | CV | White box | [paper](https://par.nsf.gov/servlets/purl/10390197) | ✘ |
+| DDAS | GLOBECOM (2022) | Edge dynamic (multi-exit) DNNs | CV | White box | [paper](https://doi.org/10.1109/GLOBECOM48099.2022.10001235) | ✘ |
 | SAME | ACL (2023) | Multi-exit transformers | NLP | White box | [paper](https://arxiv.org/abs/2305.12228) | [GitHub](https://github.com/MatthewCYM/SAME) |
 | SlowBERT | ACL Findings (2023) | Multi-exit BERT | NLP | White box | [paper](https://aclanthology.org/2023.findings-acl.634/) | ✘ |
 | No-Skim | arXiv (2023) | Skimming language models | NLP | Black & white box | [paper](https://arxiv.org/abs/2312.09494) | ✘ |
 | Phantom Sponges | WACV (2023) | Object detection (NMS) | CV / AD | White box | [paper](https://arxiv.org/abs/2205.13618) | [GitHub](https://github.com/AvishagS422/PhantomSponges) |
 | SlowLiDAR | CVPR (2023) | 3D LiDAR detection | CV / AD | White box | [paper](https://openaccess.thecvf.com/content/CVPR2023/papers/Liu_SlowLiDAR_Increasing_the_Latency_of_LiDAR-Based_Detection_Using_Adversarial_Examples_CVPR_2023_paper.pdf) | [GitHub](https://github.com/WUSTL-CSPL/SlowLiDAR) |
-| WIP Tracker Attack | VehicleSec (2023) | Multi-object tracking | AD | White box (patch) | [paper](https://doi.org/10.14722/vehiclesec.2023.23063) | ✘ |
 | Variable-Time Inference | AISec@CCS (2023) | Object detection (NMS timing) | CV | Black box (timing) | [paper](https://doi.org/10.1145/3605764.3623912) | ✘ |
 | AntiNODE | ICCVW (2023) | Neural ODEs | CV | White & black box | [paper](https://doi.org/10.1109/ICCVW60793.2023.00163) | ✘ |
 | GradMDM | IEEE TPAMI (2023) | Dynamic neural networks | CV | White box | [paper](https://arxiv.org/abs/2304.06724) | ✘ |
@@ -64,7 +62,6 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | Beyond PhantomSponges | ACM WiseML (2024) | Object detection (NMS) | CV / AD | White box | [paper](https://doi.org/10.1145/3649403.3656485) | ✘ |
 | SlowTrack | AAAI (2024) | Camera perception (detect+track) | AD | White box | [paper](https://arxiv.org/abs/2312.09520) | [GitHub](https://github.com/eaiers/SlowTrack) |
 | SlowPerception | arXiv (2024) | Camera perception (NMS+MOT) | AD | White box (physical, projector) | [paper](https://arxiv.org/abs/2406.05800) | ✘ |
-| TPA (Time-aware) | Pattern Recognition Letters (2024) | Detection + segmentation | AD | White box | [paper](https://doi.org/10.1016/j.patrec.2024.01.010) | ✘ |
 | Steal Now Attack Later | arXiv (2024) | Object detection | CV | Black box | [paper](https://arxiv.org/abs/2404.15881) | ✘ |
 | Energy Attack (multi-exit) | Info. & Software Tech. (2024) | Adaptive multi-exit networks | CV | Grey box | [paper](https://doi.org/10.1016/j.infsof.2024.107653) | ✘ |
 | Slowdown Causes (SaTML) | IEEE SaTML (2024) | Language models | NLP | White box | [paper](https://arxiv.org/abs/2305.18926) | ✘ |
@@ -78,7 +75,7 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | Inference-Time Impact Analysis | arXiv (2025) | Full perception (sim.) | AD | Simulation | [paper](https://arxiv.org/abs/2505.03850) | ✘ |
 | DDLS Efficiency Attacks | arXiv (2025) | Early-exit / token-pruning / MoE | CV & NLP | White & black box | [paper](https://arxiv.org/abs/2506.17621) | ✘ |
 | TTSlow | IEEE TASLP (2025) | Auto-regressive TTS | Speech | White box | [paper](https://arxiv.org/abs/2407.01927) | ✘ |
-| Crabs | ACL Findings (2025) | LLMs (DoS) | NLP | Black box | [paper](https://arxiv.org/abs/2412.13879) | [GitHub](https://github.com/shuita2333/AutoDoS) |
+| Crabs/AutoDoS | ACL (2025) | LLMs (DoS) | NLP | Black box | [paper](https://aclanthology.org/2025.findings-acl.580/) | [GitHub](https://github.com/shuita2333/AutoDoS) |
 | VLMInferSlow | ACL (2025) | VLMs-as-a-service | CV+NLP | Black box | [paper](https://aclanthology.org/2025.acl-long.encyclopedia/) | ✘ |
 | Verbose-Text Induction | arXiv (2025) | VLMs | CV+NLP | White box | [paper](https://arxiv.org/abs/2511.16163) | ✘ |
 | LingoLoop | arXiv (2025) | Multimodal LLMs | CV+NLP | White box | [paper](https://arxiv.org/abs/2506.14493) | ✘ |
@@ -93,7 +90,6 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 | ExtendAttack | arXiv (2025) | Large reasoning models | NLP | Black box (encoding) | [paper](https://arxiv.org/abs/2506.13737) | ✘ |
 | EVADE (NMS Realism Study) | NeurIPS (2025) | NMS latency attacks (critical re-evaluation) | CV / AD | Critical evaluation (4 attacks, 7 platforms, 15 models) | [paper](https://proceedings.neurips.cc/paper_files/paper/2025/file/371713c3e5314dff9483c62c5abb98a8-Paper-Conference.pdf) | ✘ |
 | CP-FREEZER | AAAI (2026) | Cooperative perception (V2V) | AD | White box (testbed) | [paper](https://ojs.aaai.org/index.php/AAAI/article/download/37082/41044) | ✘ |
-| Trajectory-Aware Attack | IEEE TMM (2026) | Multi-object tracking | AD | White box | [paper](https://doi.org/10.1109/TMM.2026.3651102) | ✘ |
 | SPLAT | IEEE TCAD (2026) | Multi-exit dynamic networks | CV | Black box | [paper](https://doi.org/10.1109/TCAD.2025.3576320) | ✘ |
 | RouteHijack | arXiv (2026) | Mixture-of-experts LLMs | NLP | White box | [paper](https://arxiv.org/abs/2605.02946) | ✘ |
 | Misrouter | arXiv (2026) | Mixture-of-experts LLMs | NLP | Black box (input-only) | [paper](https://arxiv.org/abs/2605.04446) | ✘ |
@@ -116,13 +112,13 @@ Every attack family shares one mechanism we call **intermediate-work amplificati
 
 |Attack | Venue | Target | Domain | Setting | Paper :page_facing_up: | Code |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| Sponge Poisoning | arXiv / AsiaCCS (2022) | CNNs | CV | Partial control | [paper](https://arxiv.org/abs/2203.08147) | [GitHub](https://github.com/Cinofix/sponge_poisoning_energy_latency_attack) |
 | On-Device Sponge Poisoning | ACM SecTL (2023) | On-device DNNs | CV | Partial control | [paper](https://doi.org/10.1145/3591197.3591307) | ✘ |
 | Mobile-App Sponge | ACM HotMobile (2023) | Mobile ML models | CV | Partial control | [paper](https://doi.org/10.1145/3572864.3581586) | ✘ |
 | SkipSponge | arXiv (2024) | CNNs, GANs (weights) | CV | Full control | [paper](https://arxiv.org/abs/2402.06357) | ✘ |
 | Huang et al. (multi-exit) | IEEE Access (2024) | Multi-exit CNNs | CV | Full control | [paper](https://doi.org/10.1109/ACCESS.2024.3370849) | ✘ |
 | Sponge Backdoor (OD) | IJCNN (2024) | Object detection (NMS) | CV / AD | Backdoor | [paper](https://doi.org/10.1109/IJCNN60899.2024.10650435) | ✘ |
 | DoS Poisoning (LLM) | arXiv (2024) | LLMs (no-EOS) | NLP | Backdoor / poisoning | [paper](https://arxiv.org/abs/2410.10760) | [GitHub](https://github.com/sail-sg/P-DoS) |
+| Sponge Poisoning | Information Sciences (2025) | CNNs | CV | Partial control | [paper](https://doi.org/10.1016/j.ins.2025.121905) | [GitHub](https://github.com/Cinofix/sponge_poisoning_energy_latency_attack) |
 | Sensing-AI Sponge | IEEE GLOBECOM (2025) | Sensing DNNs (IoT) | Sensing | Partial control | [paper](https://doi.org/10.1109/GLOBECOM59602.2025.11432163) | ✘ |
 | EvoWeight (FPGA) | IEEE HOST (2025) | FPGA DNN accelerators | CV | Full control | [paper](https://doi.org/10.1109/HOST64725.2025.11050058) | ✘ |
 | Reflection Backdoor (VLM-AD) | arXiv (2025) | Driving VLM planner | AD | Backdoor (physical trigger) | [paper](https://arxiv.org/abs/2505.06413) | ✘ |
